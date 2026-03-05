@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+.Fad{
+    animation: FadeIn 3s ease-in;
+}
+@keyframes FadeIn{
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+.blur-nav{
+    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.8);
+}
+.buttom-line{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+
+}
+.buttom-line::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to right, rgb(109, 6, 109), pink);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.4s ease-out;
+}   
+.buttom-line:hover::after{
+    transform: scaleX(1);
+}
+
+.slide{
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    backdrop-filter: contrast(1.1);
+    align-items: center; 
+    right: 0;
+}
+.toggle-btn{
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg] 
+}
+ .gradient-bg {
+            background: linear-gradient(45deg, #0f172a, #1e1b4b, #312e81, #1e293b);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+        }
+  @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+.float-shape {
+            animation: float 6s ease-in-out infinite;
+        }
+
+ .float-shape-slow {
+            animation: float-slow 8s ease-in-out infinite;
+        }
+     @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(18deg); }
+        }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) translateX(0px); }
+            50% { transform: translateY(-90px) translateX(10px); }
+        }
+
+    .typing-text{
+         display:inline-block;
+        overflow:hidden;
+        white-space: nowrap;
+        border-right: 3px solid #a855f7;
+        animation: typing 4s steps(30) infinite, Blink 0.75s step-end infinite;
+    }
+    @keyframes typing {
+        0%, 100%{width: 0;}
+        50% {width: 100%;}
+    }
+    @keyframes Blink{
+        
+            0%, 100%{border-color: transparent;}
+            50%{ border-color:#a855f7}
+        
+    }
