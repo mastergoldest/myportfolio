@@ -115,3 +115,14 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #818cf8;
         }
+    .glass-cardi{
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid  rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+    }
+    .glass-cardi:hover{
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.02);
+        transform: translateY(-5px);
+    }
