@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
-/* .Fad{
+.Fad{
     animation: FadeIn 3s ease-in;
 }
 @keyframes FadeIn{
     0% {opacity: 0;}
     100%{opacity: 1;}
-} */
+}
 .fade-in{
     opacity: 0;
     transition: opacity 0.75s ease, transform 0.75s ease;
